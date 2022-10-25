@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>    
+    <ion-title>Menu Profesor</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="start" name="menu-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+
+  <ion-card class="menu">
+
+    <ion-item href="#">
+      <ion-icon slot="start" name="walk" color="secondary"></ion-icon>
+      <ion-label class="walk">Definir clase</ion-label>
+    </ion-item>
+
+    <ion-item href="#">
+      <ion-icon slot="start" name="warning" color="danger"></ion-icon>
+      <ion-label class="warning">Revisar asistencias</ion-label>
+    </ion-item>
+
+    <ion-item href="#">
+      <ion-icon slot="start" name="warning" color="danger"></ion-icon>
+      <ion-label class="warning">Revisar tus clases</ion-label>
+    </ion-item>
+  </ion-card>
+
+</ion-content>
+

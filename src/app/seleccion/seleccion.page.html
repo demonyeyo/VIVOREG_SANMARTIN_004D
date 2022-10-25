@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ingreso</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-card class="cardprincipal transparent-card letra"> 
+    <ion-card-header>
+      <ion-card-title>Bienvenido a VivoReg</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+    
+        <ion-button [routerLink]="['/loginprofesor']" expand="full" shape="round" color="warning">Soy profesor</ion-button>
+        <br>
+        <ion-button [routerLink]="['/login']" expand="full" shape="round" color="warning">Soy alumno</ion-button>
+
+        
+    </ion-card-content>
+    
+    
+  </ion-card>
+  <br><br>
+  <img src="assets/images/vivoregfinal.png" width="200" class="center">
+</ion-content>

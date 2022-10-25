@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+    
+
+    <!-- NG-template = Mini archivo HTML -->
+    <div *ngIf="isAlumno; then alumno else profesor"></div>
+    <!-- ese DIV no funciona, pero sirve para detectar la variable "isAlumno" -->
+    <!-- Si la variable isAlumno es "TRUE", entonces activa el ng-template alumno -->
+    <!-- Si es "FALSE" activa el ng-template profesor -->
+    <!-- La variable "isAlumno" viene dado por el qr.page.ts -->
+    <ng-template #alumno>
+      <div class="ion-text-center letra">
+        <h3>Escanea tú código</h3>
+      </div>
+      <div class="ion-text-center">
+        <img src="assets/images/camara.png" width="55%">
+      </div>
+      <ion-button (click)="Escanear()" expand="block" color="warning">
+        Escanear QR!
+      </ion-button>
+    </ng-template>
+    
+    <ng-template #profesor>
+      <div class="ion-text-center letra">
+        <h3>Genera tú código</h3>
+      </div>
+      <div class="ion-text-center">
+        <img src="assets/images/QR.png" width="70%">
+      </div>
+      <ion-button (click)="Escanear()" expand="block" color="warning">
+        Generar QR!
+      </ion-button>
+    </ng-template>  
+
+</ion-content>

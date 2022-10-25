@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ingreso Alumnos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <ion-card class="transparent-card letra">
+    <ion-card-header>
+      <ion-card-title>Inicia Sesión</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <form #formulario="ngForm" (ngSubmit)="onSubmit()">
+        <ion-item>
+          <ion-label position="floating">Correo institucional</ion-label>
+          <ion-input type="email" name="entradaCorreoProfesor" [(ngModel)]="alumno.email" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input type="password" placeholder="********" name="entradaPasswordProfesor" [(ngModel)]="alumno.password" required></ion-input>
+        </ion-item>
+        <ion-button  [disabled]="formulario.invalid" type="submit" color="warning">
+          Ingresar
+        </ion-button>
+      </form>
+
+      <br>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/registro']" class="letra">Registrate!</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

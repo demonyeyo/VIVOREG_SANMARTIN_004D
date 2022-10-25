@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Feriados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-button (click)="consultarApi()" expand="block" fill="clear" shape="round">
+    Ver Feriados 2022
+  </ion-button>
+
+  <ion-item *ngFor="let dia of dias">
+    <ion-label>{{dia.nombre}}</ion-label>
+    <ion-label>{{dia.fecha}}</ion-label>
+  </ion-item>
+
+</ion-content>
